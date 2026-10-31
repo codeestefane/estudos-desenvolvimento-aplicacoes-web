@@ -25,7 +25,6 @@ function EspecificacaoRoteiro(){
         } else {
             alert("Preencha todos os campos!");
         }
-        
     }
 
     return (

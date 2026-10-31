@@ -20,10 +20,11 @@ function Login(){
 
     if(email && password){
       const loggedUser = usersList.find(user => user.email == email && user.password == password);
-      setUser(loggedUser.name);
-  
-      if(loggedUser){
-
+      
+      if(!email.endsWith("@escola.educa.gov.br")){
+        alert("O e-mail deve terminar com @escola.educa.gov.br!");
+      } else if(loggedUser){
+        setUser(loggedUser.name);
         if(profile == "aluno"){
           navigate('/menu-roteiro', {state: {'profile': profile, 'user': loggedUser.name}});
         } else {
@@ -33,6 +34,7 @@ function Login(){
       } else {
         alert("Usuário ou senha inválidos!");
       }
+
     } else {
       alert("Preencha todos os campos!");
     }

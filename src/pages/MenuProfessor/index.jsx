@@ -12,7 +12,6 @@ function MenuProfessor(){
     const { profile, user } = location.state || {};
 
     const handleClick = (e) => {
-        console.log(profile, user);
         if(e.target.className == "consultar"){
             navigate('/menu-roteiro', {state: {'profile': profile, 'user': user}});
         } else {

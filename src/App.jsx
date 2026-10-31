@@ -5,9 +5,9 @@ import Inicio from './pages/Inicio';
 import MenuRoteiro from './pages/MenuRoteiro';
 import Roteiros from './pages/Roteiros';
 import MenuProfessor from './pages/MenuProfessor';
-import Credencial from './pages/ConsultarRoteiro/Credencial';
-import EspecificacaoRoteiro from './pages/ConsultarRoteiro/EspecificacaoRoteiro';
-import PrazoEntrega from './pages/ConsultarRoteiro/PrazoEntrega';
+import Credencial from './pages/SolicitarRoteiro/Credencial';
+import EspecificacaoRoteiro from './pages/SolicitarRoteiro/EspecificacaoRoteiro';
+import PrazoEntrega from './pages/SolicitarRoteiro/PrazoEntrega';
 
 function App(){
     return (

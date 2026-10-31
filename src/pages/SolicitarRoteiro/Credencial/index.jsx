@@ -18,8 +18,11 @@ function Credencial(){
     e.preventDefault();
 
     if(email && nome){
-        console.log(user);
-        navigate('/solicitar-roteiro-info', {state: {'profile': profile, 'user': user, 'nome': nome, 'email': email}})
+        if(!email.endsWith("@escola.educa.gov.br")){
+            alert("O e-mail deve terminar com @escola.educa.gov.br!");
+        } else {
+            navigate('/solicitar-roteiro-info', {state: {'profile': profile, 'user': user, 'nome': nome, 'email': email}})
+        }
     } else {
       alert("Preencha todos os campos!");
     }

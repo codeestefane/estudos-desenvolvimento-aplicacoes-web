@@ -8,6 +8,7 @@ Aplicação web desenvolvida com React e Vite para apoiar o acesso de alunos e p
 - Login com usuários armazenados localmente.
 - Fluxos separados para alunos e professores.
 - Consulta de roteiros por ano escolar e disciplina.
+- Consulta de roteiros ou solicitação de novos roteiros pelo menu de professor.
 - Solicitação de roteiros por fluxo de credencial, especificação e prazo.
 - Componentes reutilizáveis para cabeçalho, campos, seletores e botões.
 
@@ -31,8 +32,8 @@ Aplicação web desenvolvida com React e Vite para apoiar o acesso de alunos e p
 Clone o repositório e instale as dependências:
 
 ```bash
-git clone <url-do-repositorio>
-cd app
+git clone https://github.com/codeestefane/estudos-desenvolvimento-aplicacoes-web.git
+cd estudos-desenvolvimento-aplicacoes-web/ap2/app
 npm install
 ```
 
@@ -73,7 +74,7 @@ src/
 │   ├── Login/
 │   ├── MenuRoteiro/
 │   ├── MenuProfessor/
-│   └── ConsultarRoteiro/
+│   └── SolicitarRoteiro/
 ├── App.jsx
 ├── index.css
 └── main.jsx
