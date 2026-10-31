@@ -1,39 +1,42 @@
 # Aplicação educacional
 
-Aplicação web desenvolvida com React e Vite para a seleção de perfil, autenticação de usuários e consulta de roteiros conforme a disciplina e o ano escolar.
+Aplicação web desenvolvida com React e Vite para apoiar o acesso de alunos e professores a roteiros educacionais. O usuário escolhe seu perfil, realiza o login e navega por opções de consulta ou solicitação de roteiros.
 
 ## Funcionalidades
 
-- Seleção entre perfil de aluno ou professor.
-- Login com validação dos dados cadastrados localmente.
-- Seleção de ano escolar e disciplina.
-- Navegação para a página de roteiros disponíveis.
-- Componentes reutilizáveis de formulário e cabeçalho.
+- Seleção de perfil: aluno ou professor.
+- Login com usuários armazenados localmente.
+- Fluxos separados para alunos e professores.
+- Consulta de roteiros por ano escolar e disciplina.
+- Solicitação de roteiros por fluxo de credencial, especificação e prazo.
+- Componentes reutilizáveis para cabeçalho, campos, seletores e botões.
 
-## Tecnologias utilizadas
+## Tecnologias
 
 - React 19
 - React Router
 - Vite
-- Axios
 - JavaScript
 - CSS
 - ESLint
+- Axios e Day.js
 
 ## Pré-requisitos
 
-- Node.js 18 ou superior
+- Node.js 20.19 ou superior
 - npm
 
 ## Instalação
 
-No diretório do projeto, instale as dependências:
+Clone o repositório e instale as dependências:
 
 ```bash
+git clone <url-do-repositorio>
+cd app
 npm install
 ```
 
-## Executando o projeto
+## Como executar
 
 Inicie o servidor de desenvolvimento:
 
@@ -41,59 +44,67 @@ Inicie o servidor de desenvolvimento:
 npm run dev
 ```
 
-A aplicação estará disponível em `http://localhost:5173` por padrão. Endereço e porta podem ser confirmados na saída do terminal.
+Abra o endereço exibido pelo Vite, normalmente `http://localhost:5173`.
 
 ## Scripts disponíveis
 
 ```bash
-npm run dev      # inicia o servidor de desenvolvimento
-npm run build    # gera o build de produção
-npm run preview  # serve o build gerado localmente
-npm run lint     # executa o ESLint
+npm run dev      # servidor de desenvolvimento
+npm run build    # build de produção na pasta dist/
+npm run preview  # serve o build localmente
+npm run lint     # verifica o código com ESLint
 ```
 
 ## Estrutura do projeto
 
 ```text
 src/
-├── assets/                 # Imagens e ícones da interface
-├── components/             # Componentes compartilhados
-│   ├── Forms/              # Botão, campo de texto e seleção
-│   └── Header/             # Cabeçalho com navegação
-├── data/                   # Dados locais, incluindo usuários
-├── pages/                  # Páginas da aplicação
-│   ├── Inicio/             # Seleção de perfil
-│   ├── Login/              # Autenticação
-│   ├── MenuInicial/        # Seleção de ano escolar e disciplina
-│   └── Roteiros/           # Consulta de roteiros
-├── App.jsx                 # Definição das rotas
-├── index.css               # Estilos globais
-└── main.jsx                # Ponto de entrada da aplicação
+├── assets/
+├── components/
+│   ├── Forms/
+│   │   ├── Button/
+│   │   ├── Input/
+│   │   └── Select/
+│   └── Header/
+├── data/
+│   └── users.json
+├── pages/
+│   ├── Inicio/
+│   ├── Login/
+│   ├── MenuRoteiro/
+│   ├── MenuProfessor/
+│   └── ConsultarRoteiro/
+├── App.jsx
+├── index.css
+└── main.jsx
 ```
 
 ## Rotas
 
-| Rota | Página |
+| Rota | Finalidade |
 |---|---|
-| `/` | Seleção de perfil |
-| `/login` | Login |
-| `/menuroteiro` | Seleção de ano escolar e disciplina |
-| `/roteiros` | Exibição dos roteiros |
+| `/` | Seleção do perfil |
+| `/login` | Autenticação |
+| `/menu-roteiro` | Seleção de ano escolar e disciplina |
+| `/roteiros` | Consulta dos roteiros disponíveis |
+| `/menu-professor` | Menu de professor |
+| `/solicitar-roteiro-credencial` | Informações de credencial da solicitação |
+| `/solicitar-roteiro-info` | Especificação do roteiro |
+| `/solicitar-roteiro-prazo` | Prazo de entrega |
 
-## Dados de acesso
+## Dados de demonstração
 
-Os usuários de demonstração são definidos em `src/data/users.json`. Como os dados são armazenados localmente, esse arquivo não deve ser usado para autenticação real ou informações sensíveis.
+Os usuários disponíveis para demonstração estão em [`src/data/users.json`](./src/data/users.json). A autenticação é apenas local e não deve ser usada para armazenar credenciais reais ou proteger dados sensíveis.
 
 ## Build de produção
 
-Para gerar os arquivos otimizados da aplicação:
-
 ```bash
 npm run build
+npm run preview
 ```
 
-Os arquivos serão disponibilizados na pasta `dist/`.
+Os arquivos otimizados são gerados na pasta `dist/`.
 
 ## Licença
 
-Este projeto foi desenvolvido para fins acadêmicos.
+Projeto desenvolvido para fins acadêmicos.

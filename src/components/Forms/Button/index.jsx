@@ -2,7 +2,7 @@ import '../index.css'
 
 function Button(props){
     return(
-        <button type={props.type} onClick = {(e) => props.handle(e)}>{props.content}</button>
+        <button type={props.type} onClick = {(e) => props.handle(e)} className={props.className}>{props.content}</button>
     )
 }
 

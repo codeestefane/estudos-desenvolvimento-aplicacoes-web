@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import { useLocation } from 'react-router'
 
 import { useNavigate } from 'react-router';
 import usersList from '../../data/users.json';
@@ -11,18 +12,25 @@ function Login(){
   const [password, setPassword] = useState('');
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
+  const location = useLocation();
+  const { profile } = location.state || {};
 
   const handleLogin = async (e) => {
     e.preventDefault();
 
     if(email && password){
       const loggedUser = usersList.find(user => user.email == email && user.password == password);
-  
-      setUser(loggedUser);
+      setUser(loggedUser.name);
   
       if(loggedUser){
-        navigate('/menuroteiro', {state: loggedUser});
-      }else {
+
+        if(profile == "aluno"){
+          navigate('/menu-roteiro', {state: {'profile': profile, 'user': loggedUser.name}});
+        } else {
+          navigate('/menu-professor', {state: {'profile': profile, 'user': loggedUser.name}});
+        }
+
+      } else {
         alert("Usuário ou senha inválidos!");
       }
     } else {

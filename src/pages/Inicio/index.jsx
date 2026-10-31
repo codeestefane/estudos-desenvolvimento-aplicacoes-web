@@ -4,17 +4,18 @@ import {useNavigate} from 'react-router';
 import Button from '../../components/Forms/Button'
 
 function Inicio(){
-    const [count, setCount] = useState(0);
+    const [profile, setProfile] = useState('');
     const navigate = useNavigate();
 
-    const handleClick = () => {
-        navigate('/login');
+    const handleClick = (e) => {
+        navigate('/login', {state: {'profile': e.target.className}});
+        setProfile(e.target.className);
     }
 
     return (
     <section>
-        <Button type = "submit" handle = {handleClick} content = "Sou aluno(a)"/>
-        <Button type = "submit" handle = {handleClick} content = "Sou professor(a)"/>
+        <Button type = "submit" handle = {handleClick} content = "Sou aluno(a)" className="aluno"/>
+        <Button type = "submit" handle = {handleClick} content = "Sou professor(a)" className="professor"/>
     </section>
     )
 }

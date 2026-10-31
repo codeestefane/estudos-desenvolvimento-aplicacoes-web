@@ -10,10 +10,11 @@ button {
     background-color: #97BCFB;
     font-weight: bold;
     margin: 0 auto;
-    width: 20%;
+    width: 30%;
     padding: 30px;
     border-radius: 20px;
     transition: all 0.5s ease-in-out;
+    border: none;
 }
 
 label {
@@ -29,7 +30,8 @@ input {
     margin-bottom: 40px;
 }
 
+
 button:hover {
-  cursor: pointer;
-  scale: calc(1.05);
+    cursor: pointer;
+    scale: calc(1.05);
 }

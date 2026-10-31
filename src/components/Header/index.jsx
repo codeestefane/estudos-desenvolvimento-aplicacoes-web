@@ -9,7 +9,11 @@ function Header(props){
     const navigate = useNavigate();
 
     const returnLastPage = () => {
-        navigate(-1);
+        if(props.page == "menu"){
+            navigate('/login')
+        } else {
+            navigate(-1);
+        }
     }
 
     const exitApp = () => {

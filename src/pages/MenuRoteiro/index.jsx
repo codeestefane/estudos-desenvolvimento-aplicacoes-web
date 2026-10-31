@@ -6,9 +6,9 @@ import Header from '../../components/Header'
 import Select from '../../components/Forms/Select'
 import Button from '../../components/Forms/Button'
 
-function MenuInicial(){
+function MenuRoteiro(){
     const location = useLocation();
-    const user = location.state;
+    const { profile, user } = location.state || {};
     const navigate = useNavigate();
     const [disciplina, setDisciplina] = useState('Matemática');
     const [anoEscolar, setAnoEscolar] = useState('6°');
@@ -20,7 +20,7 @@ function MenuInicial(){
 
     return(
         <>
-            <Header title = {`Seja bem vindo(a), ${user?.name.toUpperCase()}!`} />
+            <Header title = {`Seja bem vindo(a), ${user.toUpperCase()}!`} page = "menu"/>
              <section>
                 <form>
                     <Select name = "selectAnoEscolar" label = "Selecione o ano escolar:" setValue = {setAnoEscolar} defaultValue = "6" optionsList = {[{"value": "6°"}, 
@@ -34,9 +34,8 @@ function MenuInicial(){
                 </form>
             </section>
         </>
-
     )
 
 }
 
-export default MenuInicial;
+export default MenuRoteiro;

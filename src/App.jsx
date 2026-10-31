@@ -2,16 +2,24 @@ import {Routes, Route} from 'react-router';
 
 import Login from './pages/Login';
 import Inicio from './pages/Inicio';
-import MenuInicial from './pages/MenuInicial';
+import MenuRoteiro from './pages/MenuRoteiro';
 import Roteiros from './pages/Roteiros';
+import MenuProfessor from './pages/MenuProfessor';
+import Credencial from './pages/ConsultarRoteiro/Credencial';
+import EspecificacaoRoteiro from './pages/ConsultarRoteiro/EspecificacaoRoteiro';
+import PrazoEntrega from './pages/ConsultarRoteiro/PrazoEntrega';
 
 function App(){
     return (
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/menuroteiro" element={<MenuInicial />} />
+          <Route path="/menu-roteiro" element={<MenuRoteiro />} />
           <Route path="/roteiros" element={<Roteiros />} />
+          <Route path="/menu-professor" element={<MenuProfessor />} />
+          <Route path="/solicitar-roteiro-credencial" element={<Credencial />} />
+          <Route path="/solicitar-roteiro-info" element={<EspecificacaoRoteiro />} />
+          <Route path="/solicitar-roteiro-prazo" element={<PrazoEntrega />} />
           <Route path="*" element={<Inicio />} />
         </Routes>
   )
