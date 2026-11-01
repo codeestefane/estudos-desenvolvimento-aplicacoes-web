@@ -1,39 +1,37 @@
-# Aplicação educacional
+# Plataforma de roteiros educacionais
 
-Aplicação web desenvolvida com React e Vite para apoiar o acesso de alunos e professores a roteiros educacionais. O usuário escolhe seu perfil, realiza o login e navega por opções de consulta ou solicitação de roteiros.
+Aplicação web desenvolvida com React e Vite para auxiliar alunos e professores no acesso, criação e revisão de roteiros de estudo. A interface oferece fluxos específicos para cada perfil, dados locais de demonstração e conteúdo complementar consultado na Wikipédia.
 
 ## Funcionalidades
 
-- Seleção de perfil: aluno ou professor.
-- Login com usuários armazenados localmente.
-- Fluxos separados para alunos e professores.
-- Consulta de roteiros por ano escolar e disciplina.
-- Consulta de roteiros ou solicitação de novos roteiros pelo menu de professor.
-- Solicitação de roteiros por fluxo de credencial, especificação e prazo.
-- Componentes reutilizáveis para cabeçalho, campos, seletores e botões.
+- Escolha entre os perfis de aluno e professor.
+- Login com usuários cadastrados em arquivo local.
+- Filtragem de roteiros por ano escolar e disciplina.
+- Visualização da explicação, tema, duração, professor responsável e revisão pedagógica.
+- Consulta de texto de apoio pela API da Wikipédia, com estados de carregamento, erro e tentativa novamente.
+- Questionários com alternativas, correção e justificativas.
+- Menu exclusivo para professor consultar roteiros ou solicitar novos conteúdos.
+- Solicitação de roteiros em etapas: credencial, especificação e prazo de entrega.
 
 ## Tecnologias
 
 - React 19
 - React Router
 - Vite
-- JavaScript
+- JavaScript e JSX
 - CSS
 - ESLint
-- Axios e Day.js
 
 ## Pré-requisitos
 
-- Node.js 20.19 ou superior
+- Node.js 20.19 ou versão superior
 - npm
 
 ## Instalação
 
-Clone o repositório e instale as dependências:
+Na raiz deste projeto, instale as dependências:
 
 ```bash
-git clone https://github.com/codeestefane/estudos-desenvolvimento-aplicacoes-web.git
-cd estudos-desenvolvimento-aplicacoes-web/ap2/app
 npm install
 ```
 
@@ -45,57 +43,64 @@ Inicie o servidor de desenvolvimento:
 npm run dev
 ```
 
-Abra o endereço exibido pelo Vite, normalmente `http://localhost:5173`.
+Acesse o endereço informado pelo Vite, normalmente `http://localhost:5173`.
 
 ## Scripts disponíveis
 
-```bash
-npm run dev      # servidor de desenvolvimento
-npm run build    # build de produção na pasta dist/
-npm run preview  # serve o build localmente
-npm run lint     # verifica o código com ESLint
-```
+| Comando | Descrição |
+|---|---|
+| `npm run dev` | Inicia o servidor de desenvolvimento. |
+| `npm run build` | Cria o build de produção em `dist/`. |
+| `npm run preview` | Serve localmente o build de produção. |
+| `npm run lint` | Executa a análise estática com ESLint. |
 
 ## Estrutura do projeto
 
 ```text
 src/
-├── assets/
 ├── components/
+│   ├── CardRoteiro/
 │   ├── Forms/
-│   │   ├── Button/
-│   │   ├── Input/
-│   │   └── Select/
-│   └── Header/
+│   ├── Header/
+│   ├── Questionario/
+│   ├── RevisaoProfessor/
+│   └── TextoApoio/
 ├── data/
+│   ├── professores.json
+│   ├── roteiros.json
 │   └── users.json
 ├── pages/
 │   ├── Inicio/
 │   ├── Login/
-│   ├── MenuRoteiro/
 │   ├── MenuProfessor/
+│   ├── MenuRoteiro/
+│   ├── Roteiro/
+│   ├── Roteiros/
 │   └── SolicitarRoteiro/
 ├── App.jsx
 ├── index.css
 └── main.jsx
 ```
 
-## Rotas
+## Rotas principais
 
 | Rota | Finalidade |
 |---|---|
-| `/` | Seleção do perfil |
-| `/login` | Autenticação |
-| `/menu-roteiro` | Seleção de ano escolar e disciplina |
-| `/roteiros` | Consulta dos roteiros disponíveis |
-| `/menu-professor` | Menu de professor |
-| `/solicitar-roteiro-credencial` | Informações de credencial da solicitação |
-| `/solicitar-roteiro-info` | Especificação do roteiro |
-| `/solicitar-roteiro-prazo` | Prazo de entrega |
+| `/` | Seleção do perfil do usuário. |
+| `/login` | Autenticação local. |
+| `/menu-roteiro` | Seleção de ano escolar e disciplina. |
+| `/roteiros` | Lista dos roteiros encontrados. |
+| `/roteiros/:id` | Conteúdo detalhado de um roteiro. |
+| `/menu-professor` | Menu de professor. |
+| `/solicitar-roteiro-credencial` | Credenciais da solicitação. |
+| `/solicitar-roteiro-info` | Especificações do roteiro. |
+| `/solicitar-roteiro-prazo` | Prazo de entrega. |
 
 ## Dados de demonstração
 
-Os usuários disponíveis para demonstração estão em [`src/data/users.json`](./src/data/users.json). A autenticação é apenas local e não deve ser usada para armazenar credenciais reais ou proteger dados sensíveis.
+Os usuários estão definidos em [`src/data/users.json`](./src/data/users.json), os professores em [`src/data/professores.json`](./src/data/professores.json) e os roteiros em [`src/data/roteiros.json`](./src/data/roteiros.json).
+
+A autenticação e os dados são simulados apenas em arquivos locais. Esse projeto não deve ser usado para autenticação real ou armazenamento de credenciais em ambiente de produção.
 
 ## Build de produção
 
@@ -103,8 +108,6 @@ Os usuários disponíveis para demonstração estão em [`src/data/users.json`](
 npm run build
 npm run preview
 ```
-
-Os arquivos otimizados são gerados na pasta `dist/`.
 
 ## Licença
 
