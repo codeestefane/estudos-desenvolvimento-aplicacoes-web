@@ -1,0 +1,78 @@
+.questionario {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.faixa {
+    background-color: #97BCFB;
+    text-align: center;
+    font-size: 15px;
+    padding: 18px;
+    border-radius: 12px;
+}
+
+.bloco-questao {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.questao {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 24px 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.questao p {
+    padding: 0 0 0 18px;
+}
+
+.alternativas {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.alternativa {
+    margin: 0;
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.alternativa input {
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.alternativa.correta { 
+    background-color: #D0FFD0; 
+}
+.alternativa.errada { 
+    background-color: #FFD0D0; 
+}
+
+.feedback {
+    padding: 14px 18px;
+    border-radius: 12px;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.acerto { 
+    background-color: #BFF2CC; 
+}
+
+.erro { 
+    background-color: #EEC0CC; 
+}

@@ -8,6 +8,7 @@ import MenuProfessor from './pages/MenuProfessor';
 import Credencial from './pages/SolicitarRoteiro/Credencial';
 import EspecificacaoRoteiro from './pages/SolicitarRoteiro/EspecificacaoRoteiro';
 import PrazoEntrega from './pages/SolicitarRoteiro/PrazoEntrega';
+import Roteiro from './pages/Roteiro';
 
 function App(){
     return (
@@ -20,6 +21,8 @@ function App(){
           <Route path="/solicitar-roteiro-credencial" element={<Credencial />} />
           <Route path="/solicitar-roteiro-info" element={<EspecificacaoRoteiro />} />
           <Route path="/solicitar-roteiro-prazo" element={<PrazoEntrega />} />
+          <Route path="/roteiros" element={<Roteiros />} />
+          <Route path="/roteiros/:id" element={<Roteiro />} />
           <Route path="*" element={<Inicio />} />
         </Routes>
   )

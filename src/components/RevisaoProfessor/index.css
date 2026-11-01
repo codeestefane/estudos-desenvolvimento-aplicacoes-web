@@ -1,0 +1,7 @@
+.revisao {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    text-align: right;
+    font-size: 12px;
+}

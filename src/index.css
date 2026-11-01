@@ -25,3 +25,119 @@ section {
   justify-content: space-around;
   align-items: center;
 }
+
+/* páginas de conteúdo */
+section.pagina {
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 130px;
+  padding-bottom: 5vh;
+  gap: 24px;
+}
+
+section.pagina > * {
+  width: 100%;
+  max-width: 520px;
+}
+
+/* painel branco com faixa azul (card e roteiro aberto) */
+.painel {
+  background-color: #fff;
+  border: 1px solid #c4c4c4;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.painel-titulo {
+  background-color: #97BCFB;
+  text-align: center;
+  font-size: 15px;
+  padding: 14px;
+}
+
+.painel-corpo {
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* caixa azul claro para textos */
+.caixa {
+  background-color: #EAF2FE;
+  border-radius: 12px;
+  padding: 20px;
+  line-height: 1.7;
+}
+
+.direita {
+  text-align: right;
+  font-size: 12px;
+}
+
+/* botões */
+.painel button {
+  width: auto;
+  padding: 12px 32px;
+  border-radius: 12px;
+  margin: 10px auto 0;
+}
+
+button.secundario {
+  background-color: #fff;
+  border: 1px solid #999;
+}
+
+.acoes {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.acoes button {
+  width: auto;
+  padding: 12px 28px;
+  border-radius: 12px;
+  margin: 0;
+}
+
+/* select de filtro */
+.filtro {
+  display: flex;
+  flex-direction: column;
+}
+
+.filtro label {
+  margin: 0 0 8px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.filtro select {
+  width: 100%;
+  margin: 0;
+  padding: 14px 12px;
+  background-color: #fff;
+  border: 1px solid #333;
+  border-radius: 12px;
+  appearance: none;
+  background-image: url("./assets/seta-baixo.png");
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+}
+
+.apoio {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.caixa {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}

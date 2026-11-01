@@ -30,5 +30,19 @@
     "id": "p5", 
     "nome": "Muriel Godoi", 
     "disciplina": "Artes", 
-    "escola": "Escola Municipal Picasso" 
+    "escola": "Escola Estadual Picasso" 
+},
+
+{ 
+    "id": "p6", 
+    "nome": "Tamara Baldo", 
+    "disciplina": "Educação Física", 
+    "escola": "Escola Estadual Rui Barbosa" 
+},
+
+{ 
+    "id": "p7", 
+    "nome": "Adalberto Lazarini", 
+    "disciplina": "Educação Física", 
+    "escola": "Escola Estadual Oswaldo Diniz" 
 }]

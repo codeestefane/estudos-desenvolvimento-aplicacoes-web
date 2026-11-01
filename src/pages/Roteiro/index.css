@@ -1,0 +1,11 @@
+.acoes-roteiro {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.acoes-roteiro button {
+    width: auto;
+    margin: 0;
+    padding: 20px 30px;
+}
