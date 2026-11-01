@@ -1,0 +1,104 @@
+[{
+    "id": "poligonos",
+    "titulo": "Polígonos",
+    "tema": "Geometria Plana",
+    "disciplina": "Matemática",
+    "ano": "9°",
+    "tempoMinutos": 25,
+    "professorId": "p1",
+    "termoWikipedia": "Polígono",
+    "explicacao": "Polígono é uma figura plana fechada formada apenas por segmentos de reta. O nome depende do número de lados: o triângulo tem 3, o quadrilátero tem 4 e o hexágono tem 6. A soma dos ângulos internos de um triângulo é sempre 180°.",
+    "questoes": [{ 
+        "enunciado": "Quantos lados tem um hexágono?", 
+        "alternativas": ["5", "6", "7", "8"], 
+        "correta": 1, 
+        "justificativa": "Hexa vem do grego e significa seis." 
+    },
+    
+    { 
+        "enunciado": "Qual é a soma dos ângulos internos de um triângulo?", 
+        "alternativas": ["90°", "180°", "270°", "360°"], 
+        "correta": 1, 
+        "justificativa": "Em qualquer triângulo, os três ângulos somam 180°." 
+    }]
+},
+
+{
+    "id": "fracoes",
+    "titulo": "Frações",
+    "tema": "Números Racionais",
+    "disciplina": "Matemática",
+    "ano": "6°",
+    "tempoMinutos": 20,
+    "professorId": "p1",
+    "termoWikipedia": "Fração",
+    "explicacao": "Uma fração representa parte de um todo. O número de baixo (denominador) diz em quantas partes iguais o todo foi dividido, e o de cima (numerador) diz quantas partes foram tomadas. Frações diferentes podem representar o mesmo valor, como 1/2 e 2/4.",
+    "questoes": [
+      { "enunciado": "Qual fração é equivalente a 1/2?", "alternativas": ["1/3", "2/4", "2/3", "3/5"], "correta": 1, "justificativa": "Multiplicando numerador e denominador por 2, 1/2 vira 2/4." },
+      { "enunciado": "Quanto é 3/4 de 20?", "alternativas": ["12", "15", "16", "5"], "correta": 1, "justificativa": "20 ÷ 4 = 5, e 5 × 3 = 15." }
+    ]
+},
+
+{
+    "id": "verbos",
+    "titulo": "Verbos",
+    "tema": "Gramática",
+    "disciplina": "Português",
+    "ano": "7°",
+    "tempoMinutos": 20,
+    "professorId": "p2",
+    "termoWikipedia": "Verbo",
+    "explicacao": "Verbo é a palavra que indica ação, estado ou fenômeno da natureza. Ele varia em tempo: presente (agora), pretérito (passado) e futuro. Em 'Eu estudei ontem', o verbo 'estudei' está no passado.",
+    "questoes": [
+      { "enunciado": "Qual palavra é um verbo em 'Os alunos leem o livro'?", "alternativas": ["Os", "alunos", "leem", "livro"], "correta": 2, "justificativa": "'Leem' indica a ação praticada pelos alunos." },
+      { "enunciado": "Em qual frase o verbo está no passado?", "alternativas": ["Eu estudo agora", "Eu estudarei amanhã", "Eu estudei ontem", "Eu vou estudar depois"], "correta": 2, "justificativa": "'Estudei' indica uma ação que já aconteceu." }
+    ]
+},
+
+{
+    "id": "fotossintese",
+    "titulo": "Fotossíntese",
+    "tema": "Seres Vivos",
+    "disciplina": "Ciências",
+    "ano": "8°",
+    "tempoMinutos": 30,
+    "professorId": "p3",
+    "termoWikipedia": "Fotossíntese",
+    "explicacao": "Fotossíntese é o processo pelo qual plantas, algas e algumas bactérias produzem o próprio alimento usando a luz do sol. Elas absorvem gás carbônico e água e produzem glicose e oxigênio. Nas plantas, isso acontece nos cloroplastos, que contêm clorofila.",
+    "questoes": [
+      { "enunciado": "Que gás as plantas absorvem na fotossíntese?", "alternativas": ["Oxigênio", "Nitrogênio", "Gás carbônico", "Hélio"], "correta": 2, "justificativa": "O gás carbônico é a matéria-prima, e o oxigênio é liberado." },
+      { "enunciado": "Onde a fotossíntese acontece nas células vegetais?", "alternativas": ["Núcleo", "Cloroplastos", "Mitocôndrias", "Parede celular"], "correta": 1, "justificativa": "Os cloroplastos têm clorofila, que captura a luz." }
+    ]
+},
+
+{
+    "id": "pontos-cardeais",
+    "titulo": "Pontos Cardeais",
+    "tema": "Orientação e Localização",
+    "disciplina": "Geografia",
+    "ano": "6°",
+    "tempoMinutos": 15,
+    "professorId": "p4",
+    "termoWikipedia": "Pontos_cardeais",
+    "explicacao": "Os pontos cardeais são Norte, Sul, Leste e Oeste e servem para nos orientarmos. O Sol nasce do lado Leste e se põe do lado Oeste. Com o braço direito apontado para onde o Sol nasce, a sua frente fica voltada para o Norte.",
+    "questoes": [
+      { "enunciado": "Em qual direção o Sol nasce?", "alternativas": ["Norte", "Sul", "Leste", "Oeste"], "correta": 2, "justificativa": "O Sol nasce no Leste, também chamado de nascente." },
+      { "enunciado": "Qual ponto cardeal é oposto ao Norte?", "alternativas": ["Sul", "Leste", "Oeste", "Nordeste"], "correta": 0, "justificativa": "Norte e Sul ficam em direções opostas." }
+    ]
+},
+
+{
+    "id": "cubismo",
+    "titulo": "Cubismo",
+    "tema": "Movimentos Artísticos",
+    "disciplina": "Artes",
+    "ano": "9°",
+    "tempoMinutos": 25,
+    "professorId": "p5",
+    "termoWikipedia": "Cubismo",
+    "explicacao": "O Cubismo foi um movimento artístico do início do século XX, criado por Pablo Picasso e Georges Braque. Os artistas mostravam um mesmo objeto de vários pontos de vista ao mesmo tempo, usando formas geométricas.",
+    "questoes": [
+      { "enunciado": "Quem foi um dos criadores do Cubismo?", "alternativas": ["Pablo Picasso", "Vincent van Gogh", "Claude Monet", "Leonardo da Vinci"], "correta": 0, "justificativa": "Picasso e Braque iniciaram o movimento." },
+      { "enunciado": "Qual é uma característica do Cubismo?", "alternativas": ["Uso apenas de tons pastel", "Objetos mostrados de vários ângulos ao mesmo tempo", "Paisagens realistas", "Retratos iguais a fotografias"], "correta": 1, "justificativa": "A fragmentação em formas geométricas mostra vários ângulos de uma vez." }
+    ]
+}]

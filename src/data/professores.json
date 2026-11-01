@@ -1,0 +1,34 @@
+[{ 
+    "id": "p1", 
+    "nome": "Luiz Rodrigues", 
+    "disciplina": "Matemática", 
+    "escola": "Escola Estadual Pitágoras" 
+},
+  
+{ 
+    "id": "p2", 
+    "nome": "Rafael Mantovani", 
+    "disciplina": "Português", 
+    "escola": "Escola Estadual Rocha Lima" 
+},
+  
+{ 
+    "id": "p3", 
+    "nome": "Daniel Prado", 
+    "disciplina": "Ciências", 
+    "escola": "Escola Estadual Isaac Newton" 
+},
+  
+{ 
+    "id": "p4", 
+    "nome": "Marcelo Oliveira", 
+    "disciplina": "Geografia", 
+    "escola": "Escola Estadual Eratóstenes" 
+},
+  
+{ 
+    "id": "p5", 
+    "nome": "Muriel Godoi", 
+    "disciplina": "Artes", 
+    "escola": "Escola Municipal Picasso" 
+}]
